@@ -8,22 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		7C6012C420404186003B6D88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6012C320404185003B6D88 /* AppDelegate.swift */; };
-		7C6012C620404186003B6D88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6012C520404186003B6D88 /* ViewController.swift */; };
 		7C6012C920404186003B6D88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C6012C720404186003B6D88 /* Main.storyboard */; };
 		7C6012CC20404186003B6D88 /* PatternCalc.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C6012CA20404186003B6D88 /* PatternCalc.xcdatamodeld */; };
 		7C6012CE20404186003B6D88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C6012CD20404186003B6D88 /* Assets.xcassets */; };
 		7C6012D120404186003B6D88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C6012CF20404186003B6D88 /* LaunchScreen.storyboard */; };
+		CB7FE3BF20405FB900F0CD9E /* CalculatorConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FE3B020405FB900F0CD9E /* CalculatorConfigurator.swift */; };
+		CB7FE3C020405FB900F0CD9E /* CalculatorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FE3B220405FB900F0CD9E /* CalculatorInteractor.swift */; };
+		CB7FE3C120405FB900F0CD9E /* CalculatorInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FE3B320405FB900F0CD9E /* CalculatorInteractorInput.swift */; };
+		CB7FE3C220405FB900F0CD9E /* CalculatorInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FE3B420405FB900F0CD9E /* CalculatorInteractorOutput.swift */; };
+		CB7FE3C320405FB900F0CD9E /* CalculatorModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FE3B620405FB900F0CD9E /* CalculatorModuleInput.swift */; };
+		CB7FE3C420405FB900F0CD9E /* CalculatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FE3B720405FB900F0CD9E /* CalculatorPresenter.swift */; };
+		CB7FE3C520405FB900F0CD9E /* CalculatorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FE3B920405FB900F0CD9E /* CalculatorRouter.swift */; };
+		CB7FE3C620405FB900F0CD9E /* CalculatorRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FE3BA20405FB900F0CD9E /* CalculatorRouterInput.swift */; };
+		CB7FE3C720405FB900F0CD9E /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FE3BC20405FB900F0CD9E /* CalculatorViewController.swift */; };
+		CB7FE3C820405FB900F0CD9E /* CalculatorViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FE3BD20405FB900F0CD9E /* CalculatorViewInput.swift */; };
+		CB7FE3C920405FB900F0CD9E /* CalculatorViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FE3BE20405FB900F0CD9E /* CalculatorViewOutput.swift */; };
+		CB7FE3CC2040604700F0CD9E /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FE3CB2040604700F0CD9E /* ReusableView.swift */; };
+		CB7FE3CF204075A800F0CD9E /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FE3CE204075A800F0CD9E /* Operations.swift */; };
+		CB7FE3D1204095A600F0CD9E /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FE3D0204095A600F0CD9E /* HexColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7C6012C020404185003B6D88 /* PatternCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C6012C320404185003B6D88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7C6012C520404186003B6D88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7C6012C820404186003B6D88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C6012CB20404186003B6D88 /* PatternCalc.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PatternCalc.xcdatamodel; sourceTree = "<group>"; };
 		7C6012CD20404186003B6D88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C6012D020404186003B6D88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C6012D220404186003B6D88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB7FE3B020405FB900F0CD9E /* CalculatorConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorConfigurator.swift; sourceTree = "<group>"; };
+		CB7FE3B220405FB900F0CD9E /* CalculatorInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorInteractor.swift; sourceTree = "<group>"; };
+		CB7FE3B320405FB900F0CD9E /* CalculatorInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorInteractorInput.swift; sourceTree = "<group>"; };
+		CB7FE3B420405FB900F0CD9E /* CalculatorInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorInteractorOutput.swift; sourceTree = "<group>"; };
+		CB7FE3B620405FB900F0CD9E /* CalculatorModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorModuleInput.swift; sourceTree = "<group>"; };
+		CB7FE3B720405FB900F0CD9E /* CalculatorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorPresenter.swift; sourceTree = "<group>"; };
+		CB7FE3B920405FB900F0CD9E /* CalculatorRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorRouter.swift; sourceTree = "<group>"; };
+		CB7FE3BA20405FB900F0CD9E /* CalculatorRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorRouterInput.swift; sourceTree = "<group>"; };
+		CB7FE3BC20405FB900F0CD9E /* CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		CB7FE3BD20405FB900F0CD9E /* CalculatorViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorViewInput.swift; sourceTree = "<group>"; };
+		CB7FE3BE20405FB900F0CD9E /* CalculatorViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorViewOutput.swift; sourceTree = "<group>"; };
+		CB7FE3CB2040604700F0CD9E /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		CB7FE3CE204075A800F0CD9E /* Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operations.swift; sourceTree = "<group>"; };
+		CB7FE3D0204095A600F0CD9E /* HexColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +82,108 @@
 		7C6012C220404185003B6D88 /* PatternCalc */ = {
 			isa = PBXGroup;
 			children = (
+				CB7FE3CA2040601300F0CD9E /* Utils */,
+				CB7FE3AD20405F4B00F0CD9E /* Modules */,
+				CB7FE3AC20405F2300F0CD9E /* Supporting files */,
+			);
+			path = PatternCalc;
+			sourceTree = "<group>";
+		};
+		CB7FE3AC20405F2300F0CD9E /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
 				7C6012C320404185003B6D88 /* AppDelegate.swift */,
-				7C6012C520404186003B6D88 /* ViewController.swift */,
 				7C6012C720404186003B6D88 /* Main.storyboard */,
 				7C6012CD20404186003B6D88 /* Assets.xcassets */,
 				7C6012CF20404186003B6D88 /* LaunchScreen.storyboard */,
 				7C6012D220404186003B6D88 /* Info.plist */,
 				7C6012CA20404186003B6D88 /* PatternCalc.xcdatamodeld */,
 			);
-			path = PatternCalc;
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		CB7FE3AD20405F4B00F0CD9E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CB7FE3AE20405FB900F0CD9E /* Calculator */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CB7FE3AE20405FB900F0CD9E /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				CB7FE3CD2040758500F0CD9E /* Helpers */,
+				CB7FE3AF20405FB900F0CD9E /* Configurator */,
+				CB7FE3B120405FB900F0CD9E /* Interactor */,
+				CB7FE3B520405FB900F0CD9E /* Presenter */,
+				CB7FE3B820405FB900F0CD9E /* Router */,
+				CB7FE3BB20405FB900F0CD9E /* View */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		CB7FE3AF20405FB900F0CD9E /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				CB7FE3B020405FB900F0CD9E /* CalculatorConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		CB7FE3B120405FB900F0CD9E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CB7FE3B220405FB900F0CD9E /* CalculatorInteractor.swift */,
+				CB7FE3B320405FB900F0CD9E /* CalculatorInteractorInput.swift */,
+				CB7FE3B420405FB900F0CD9E /* CalculatorInteractorOutput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CB7FE3B520405FB900F0CD9E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CB7FE3B620405FB900F0CD9E /* CalculatorModuleInput.swift */,
+				CB7FE3B720405FB900F0CD9E /* CalculatorPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CB7FE3B820405FB900F0CD9E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CB7FE3B920405FB900F0CD9E /* CalculatorRouter.swift */,
+				CB7FE3BA20405FB900F0CD9E /* CalculatorRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CB7FE3BB20405FB900F0CD9E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB7FE3BC20405FB900F0CD9E /* CalculatorViewController.swift */,
+				CB7FE3BD20405FB900F0CD9E /* CalculatorViewInput.swift */,
+				CB7FE3BE20405FB900F0CD9E /* CalculatorViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB7FE3CA2040601300F0CD9E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CB7FE3D0204095A600F0CD9E /* HexColor.swift */,
+				CB7FE3CB2040604700F0CD9E /* ReusableView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CB7FE3CD2040758500F0CD9E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CB7FE3CE204075A800F0CD9E /* Operations.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +258,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C6012C620404186003B6D88 /* ViewController.swift in Sources */,
+				CB7FE3C220405FB900F0CD9E /* CalculatorInteractorOutput.swift in Sources */,
+				CB7FE3C820405FB900F0CD9E /* CalculatorViewInput.swift in Sources */,
+				CB7FE3C320405FB900F0CD9E /* CalculatorModuleInput.swift in Sources */,
+				CB7FE3C720405FB900F0CD9E /* CalculatorViewController.swift in Sources */,
 				7C6012CC20404186003B6D88 /* PatternCalc.xcdatamodeld in Sources */,
+				CB7FE3CC2040604700F0CD9E /* ReusableView.swift in Sources */,
+				CB7FE3BF20405FB900F0CD9E /* CalculatorConfigurator.swift in Sources */,
+				CB7FE3C020405FB900F0CD9E /* CalculatorInteractor.swift in Sources */,
 				7C6012C420404186003B6D88 /* AppDelegate.swift in Sources */,
+				CB7FE3CF204075A800F0CD9E /* Operations.swift in Sources */,
+				CB7FE3C920405FB900F0CD9E /* CalculatorViewOutput.swift in Sources */,
+				CB7FE3C420405FB900F0CD9E /* CalculatorPresenter.swift in Sources */,
+				CB7FE3C520405FB900F0CD9E /* CalculatorRouter.swift in Sources */,
+				CB7FE3D1204095A600F0CD9E /* HexColor.swift in Sources */,
+				CB7FE3C120405FB900F0CD9E /* CalculatorInteractorInput.swift in Sources */,
+				CB7FE3C620405FB900F0CD9E /* CalculatorRouterInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +411,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PatternCalc/Info.plist;
+				DEVELOPMENT_TEAM = W56K4E4L5F;
+				INFOPLIST_FILE = "$(SRCROOT)/PatternCalc/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.PatternCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -293,7 +426,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PatternCalc/Info.plist;
+				DEVELOPMENT_TEAM = W56K4E4L5F;
+				INFOPLIST_FILE = "$(SRCROOT)/PatternCalc/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.PatternCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
