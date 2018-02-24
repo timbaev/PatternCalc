@@ -48,12 +48,12 @@ class CalculatorPresenter: CalculatorModuleInput, CalculatorViewOutput, Calculat
     
         waitingSecondNumber = true
         currentOperation = operation
-        savedFirstNumber = Double(digitsLabelText)
+        savedFirstNumber = Double(stringWithComma: digitsLabelText)
     }
     
     func onSingleOperationButtonClick(with operationTitle: String, and digitsLabelText: String) {
         guard let singleOperation = SingleOperations(rawValue: operationTitle),
-            let number = Double(digitsLabelText) else { return }
+            let number = Double(stringWithComma: digitsLabelText) else { return }
         
         interactor.perform(with: singleOperation, and: number)
     }
@@ -69,12 +69,13 @@ class CalculatorPresenter: CalculatorModuleInput, CalculatorViewOutput, Calculat
     
     func onEqualButtonClick(with digitsLabelText: String) {
         guard let firstNumber = savedFirstNumber,
-            let secondNumber = Double(digitsLabelText),
+            let secondNumber = Double(stringWithComma: digitsLabelText),
             let operation = currentOperation else {
                 view.clearPressedOperationButton()
                 return
         }
         
+        waitingSecondNumber = true
         interactor.perform(with: operation, firstNumber, secondNumber)
     }
     
@@ -94,6 +95,7 @@ class CalculatorPresenter: CalculatorModuleInput, CalculatorViewOutput, Calculat
             resultString = String(roundedResult)
         } else {
             resultString = String(result)
+            resultString = resultString.replacingOccurrences(of: ".", with: ",")
         }
         
         view.setTextToDigitsLabel(resultString)
