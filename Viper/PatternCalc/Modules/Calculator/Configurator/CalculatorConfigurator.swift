@@ -11,7 +11,8 @@ import UIKit
 class CalculatorModuleConfigurator {
 
     static func setupModule() -> CalculatorViewController {
-        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController() as CalculatorViewController
+        let viewController: CalculatorViewController = UIStoryboard(storyboard: .main).instantiateViewController()
+        let alertsFactory = AlertsFactory()
         let presenter = CalculatorPresenter()
         let router = CalculatorRouter()
         let interactor = CalculatorInteractor()
@@ -21,6 +22,7 @@ class CalculatorModuleConfigurator {
         presenter.view = viewController
         presenter.router = router
         presenter.interactor = interactor
+        presenter.alertsFactory = alertsFactory
         
         router.view = viewController
         

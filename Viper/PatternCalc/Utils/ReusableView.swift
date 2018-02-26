@@ -8,10 +8,12 @@
 
 import UIKit
 
+//for instantiate view controller from storyboard
 protocol ReusableView: class {
 }
 
 extension ReusableView {
+    //identifier is name of view controller
     static var reuseIdentifier: String {
         return String(describing: self)
     }

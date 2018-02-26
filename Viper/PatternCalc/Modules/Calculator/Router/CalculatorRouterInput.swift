@@ -6,8 +6,10 @@
 //  Copyright © 2018 Timbaev. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol CalculatorRouterInput {
+    
+    func showError(_ alert: UIViewController)
 
 }

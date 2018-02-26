@@ -17,10 +17,6 @@ class CalculatorViewController: UIViewController {
     var presenter: CalculatorViewOutput!
     
     private var pressedOperationButton: UIButton?
-    private let backgroundOperationButtonColorNormal = UIColor(red: 234, green: 138, blue: 1)
-    
-    let errorMessage = "Ошибка"
-    let okMessage = "ОК"
 
     // MARK: - Life cycle
     override func viewDidLoad() {
@@ -49,12 +45,12 @@ class CalculatorViewController: UIViewController {
             let digitLabelText = digitsLabel.text else { return }
         
         if let pressedButton = pressedOperationButton, pressedButton != sender {
-            pressedButton.backgroundColor = backgroundOperationButtonColorNormal
+            pressedButton.backgroundColor = UIColorPallete.backgroundOperationButtonColorNormal
             pressedButton.setTitleColor(.white, for: .normal)
         }
         
         sender.backgroundColor = UIColor.white
-        sender.setTitleColor(backgroundOperationButtonColorNormal, for: .normal)
+        sender.setTitleColor(UIColorPallete.backgroundOperationButtonColorNormal, for: .normal)
         pressedOperationButton = sender
         
         presenter.onOperationButtonClick(with: operationTitle, and: digitLabelText)
@@ -94,16 +90,9 @@ extension CalculatorViewController: CalculatorViewInput {
         digitsLabel.text = text
     }
     
-    func showErrorAlert(with message: String) {
-        let alert = UIAlertController(title: errorMessage, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: okMessage, style: .default, handler: nil)
-        alert.addAction(okAction)
-        self.present(alert, animated: true, completion: nil)
-    }
-    
     func clearPressedOperationButton() {
         guard let pressedButton = pressedOperationButton else { return }
-        pressedButton.backgroundColor = backgroundOperationButtonColorNormal
+        pressedButton.backgroundColor = UIColorPallete.backgroundOperationButtonColorNormal
         pressedButton.setTitleColor(.white, for: .normal)
     }
 

@@ -8,9 +8,13 @@
 
 protocol CalculatorViewInput: class {
 
+    //init view
     func setupInitialState()
+    
+    //set text to display with digits
     func setTextToDigitsLabel(_ text: String)
-    func showErrorAlert(with message: String)
+    
+    //clear all digits from screen
     func clearPressedOperationButton()
     
 }

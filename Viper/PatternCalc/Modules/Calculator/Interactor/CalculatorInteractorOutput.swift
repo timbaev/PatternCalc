@@ -10,6 +10,13 @@ import Foundation
 
 protocol CalculatorInteractorOutput: class {
 
-    func calculateResult(_ result: Double?)
+    //finish calculating success
+    func didFinishCalculationSuccess(with result: Double)
+    
+    //finish calculation failure
+    func didFinishCalculationFailure(with error: CalculatorError)
+    
+    //finish prepared string
+    func didFinishPrepareString(with resultString: String)
     
 }

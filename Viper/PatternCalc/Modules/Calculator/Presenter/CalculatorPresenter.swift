@@ -11,6 +11,7 @@ class CalculatorPresenter: CalculatorModuleInput, CalculatorViewOutput, Calculat
     weak var view: CalculatorViewInput!
     var interactor: CalculatorInteractorInput!
     var router: CalculatorRouterInput!
+    var alertsFactory: AlertsFactoryProtocol!
     
     private let somethingWentWrongMessage = "Что-то пошло не так"
     
@@ -81,23 +82,17 @@ class CalculatorPresenter: CalculatorModuleInput, CalculatorViewOutput, Calculat
     
     //MARK: - interactor output
     
-    func calculateResult(_ result: Double?) {
-        guard let result = result else {
-            view.showErrorAlert(with: somethingWentWrongMessage)
-            return
+    func didFinishCalculationSuccess(with result: Double) {
+        interactor.formatString(from: result)
+    }
+    
+    func didFinishCalculationFailure(with error: CalculatorError) {
+        switch error {
+            case .incorrectOperation: router.showError(alertsFactory.getErrorAlert(with: somethingWentWrongMessage))
         }
-        
-        var resultString: String!
-        
-        let isInteger = result.truncatingRemainder(dividingBy: 1) == 0
-        if isInteger {
-            let roundedResult = Int(result)
-            resultString = String(roundedResult)
-        } else {
-            resultString = String(result)
-            resultString = resultString.replacingOccurrences(of: ".", with: ",")
-        }
-        
+    }
+    
+    func didFinishPrepareString(with resultString: String) {
         view.setTextToDigitsLabel(resultString)
         view.clearPressedOperationButton()
     }

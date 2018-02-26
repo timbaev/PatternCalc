@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        setupInitialViewController()
+        
+        return true
+    }
+    
+    private func setupInitialViewController() {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         let initialViewController = CalculatorModuleConfigurator.setupModule()
@@ -24,8 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         
         UIApplication.shared.statusBarStyle = .lightContent
-        
-        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

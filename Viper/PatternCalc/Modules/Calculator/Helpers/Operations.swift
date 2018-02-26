@@ -8,6 +8,7 @@
 
 import Foundation
 
+//operations with two number
 enum Operations: String {
     case plus = "+"
     case minus = "-"
@@ -15,6 +16,7 @@ enum Operations: String {
     case devide = "÷"
 }
 
+//operations with single number
 enum SingleOperations: String {
     case percent = "%"
     case power = "x²"

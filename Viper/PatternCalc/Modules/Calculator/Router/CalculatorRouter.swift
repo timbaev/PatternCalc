@@ -7,8 +7,13 @@
 //
 
 import UIKit
+
 class CalculatorRouter: CalculatorRouterInput {
 
-	weak var view: UIViewController?
+	weak var view: UIViewController!
+    
+    func showError(_ alert: UIViewController) {
+        view.present(alert, animated: true, completion: nil)
+    }
 
 }
