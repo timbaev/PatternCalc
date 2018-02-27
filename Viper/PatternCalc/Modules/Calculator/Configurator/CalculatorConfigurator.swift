@@ -22,9 +22,9 @@ class CalculatorModuleConfigurator {
         presenter.view = viewController
         presenter.router = router
         presenter.interactor = interactor
-        presenter.alertsFactory = alertsFactory
         
         router.view = viewController
+        router.alertsFactory = alertsFactory
         
         interactor.presenter = presenter
         

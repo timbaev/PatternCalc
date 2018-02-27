@@ -10,13 +10,22 @@ import Foundation
 
 protocol CalculatorInteractorOutput: class {
 
-    //finish calculating success
+    
+    /// Calculation finish success
+    ///
+    /// - Parameter result: calculation result
     func didFinishCalculationSuccess(with result: Double)
     
-    //finish calculation failure
+    
+    /// Calculation finish failed
+    ///
+    /// - Parameter error: calculation result with error
     func didFinishCalculationFailure(with error: CalculatorError)
     
-    //finish prepared string
+    
+    /// Result string after preparing
+    ///
+    /// - Parameter resultString: prepared string
     func didFinishPrepareString(with resultString: String)
     
 }

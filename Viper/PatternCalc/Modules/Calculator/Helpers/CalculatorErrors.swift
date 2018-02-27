@@ -9,5 +9,5 @@
 import Foundation
 
 enum CalculatorError {
-    case incorrectOperation
+    case incorrectOperation(errorMessage: String)
 }

@@ -10,6 +10,8 @@ class CalculatorInteractor: CalculatorInteractorInput {
 
     weak var presenter: CalculatorInteractorOutput!
     
+    private let errorMessage = "Ошибка при выполнении операции"
+    
     func perform(with operation: Operations, _ firstNumber: Double, _ secondNumber: Double) {
         var result: Double?
         
@@ -21,7 +23,7 @@ class CalculatorInteractor: CalculatorInteractorInput {
         }
         
         guard let operationResult = result else {
-            presenter.didFinishCalculationFailure(with: .incorrectOperation)
+            presenter.didFinishCalculationFailure(with: .incorrectOperation(errorMessage: errorMessage))
             return
         }
         presenter.didFinishCalculationSuccess(with: operationResult)
@@ -36,7 +38,7 @@ class CalculatorInteractor: CalculatorInteractorInput {
         }
     
         guard let operationResult = result else {
-            presenter.didFinishCalculationFailure(with: .incorrectOperation)
+            presenter.didFinishCalculationFailure(with: .incorrectOperation(errorMessage: errorMessage))
             return
         }
         presenter.didFinishCalculationSuccess(with: operationResult)

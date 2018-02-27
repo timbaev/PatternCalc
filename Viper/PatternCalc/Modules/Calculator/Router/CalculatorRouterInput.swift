@@ -10,6 +10,10 @@ import UIKit
 
 protocol CalculatorRouterInput {
     
-    func showError(_ alert: UIViewController)
+    
+    /// Show error alert on screen
+    ///
+    /// - Parameter message: message to display
+    func showErrorAlert(with message: String)
 
 }

@@ -8,25 +8,41 @@
 
 protocol CalculatorViewOutput {
 
-    //call, when view prepared and ready to show (viewDidLoad)
+    /// Call, when view prepared and ready to show (viewDidLoad)
     func viewIsReady()
     
-    //comma button click
+    /// Comma button click
+    ///
+    /// - Parameter digitsLabelText: current displaying text on screen
     func onCommaButtonClick(with digitsLabelText: String)
-    
-    //number button click
+
+    /// Number button click
+    ///
+    /// - Parameters:
+    ///   - title: button number title
+    ///   - digitsLabelText: current displaying text on screen
     func onNumberButtonClick(with title: String, and digitsLabelText: String)
     
-    //operations button click
+    /// Operations button click
+    ///
+    /// - Parameters:
+    ///   - operationTitle: operation button title
+    ///   - digitsLabelText: current displaying text on screen
     func onOperationButtonClick(with operationTitle: String, and digitsLabelText: String)
     
-    //single operation button click
+    /// Single operation button click
+    ///
+    /// - Parameters:
+    ///   - operationTitle: operation button title
+    ///   - digitsLabelText: current displaying text on screen
     func onSingleOperationButtonClick(with operationTitle: String, and digitsLabelText: String)
     
-    //clear button click, reset operations
+    /// Clear button click, reset operations
     func onClearButtonClick()
     
-    //equal button click, perform calculating
+    /// Equal button click, perform calculating
+    ///
+    /// - Parameter digitsLabelText: current displaying text on screen
     func onEqualButtonClick(with digitsLabelText: String)
     
 }

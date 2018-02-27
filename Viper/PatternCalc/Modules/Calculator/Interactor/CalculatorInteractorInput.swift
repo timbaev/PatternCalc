@@ -10,13 +10,25 @@ import Foundation
 
 protocol CalculatorInteractorInput {
     
-    //calculate two numbers with operation
+    /// Calculate two numbers
+    ///
+    /// - Parameters:
+    ///   - operation: calculate with operation
+    ///   - firstNumber: first number to calculate
+    ///   - secondNumber: second number to calculate
     func perform(with operation: Operations, _ firstNumber: Double, _ secondNumber: Double)
     
-    //calculate single number with operation
+    /// Calculate with one number
+    ///
+    /// - Parameters:
+    ///   - operation: operation to number
+    ///   - number: number to operate
     func perform(with operation: SingleOperations, and number: Double)
     
-    //formatting string from double value
+    
+    /// Formatting string for view with comma
+    ///
+    /// - Parameter number: number to format
     func formatString(from number: Double)
 
 }

@@ -11,9 +11,11 @@ import UIKit
 class CalculatorRouter: CalculatorRouterInput {
 
 	weak var view: UIViewController!
+    var alertsFactory: AlertsFactoryProtocol!
     
-    func showError(_ alert: UIViewController) {
-        view.present(alert, animated: true, completion: nil)
+    func showErrorAlert(with message: String) {
+        let errorAlert = alertsFactory.getErrorAlert(with: message)
+        view.present(errorAlert, animated: true, completion: nil)
     }
 
 }

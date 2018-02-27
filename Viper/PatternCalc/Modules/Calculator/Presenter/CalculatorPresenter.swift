@@ -11,9 +11,6 @@ class CalculatorPresenter: CalculatorModuleInput, CalculatorViewOutput, Calculat
     weak var view: CalculatorViewInput!
     var interactor: CalculatorInteractorInput!
     var router: CalculatorRouterInput!
-    var alertsFactory: AlertsFactoryProtocol!
-    
-    private let somethingWentWrongMessage = "Что-то пошло не так"
     
     private let zeroNumberText = "0"
     private let comma = ","
@@ -88,7 +85,7 @@ class CalculatorPresenter: CalculatorModuleInput, CalculatorViewOutput, Calculat
     
     func didFinishCalculationFailure(with error: CalculatorError) {
         switch error {
-            case .incorrectOperation: router.showError(alertsFactory.getErrorAlert(with: somethingWentWrongMessage))
+            case .incorrectOperation(let errorMessage): router.showErrorAlert(with: errorMessage)
         }
     }
     

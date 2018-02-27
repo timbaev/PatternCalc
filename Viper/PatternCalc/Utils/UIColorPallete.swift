@@ -10,7 +10,7 @@ import UIKit
 
 class UIColorPallete {
     
-    //background color for operations button
+    /// Background color for operations button
     static let backgroundOperationButtonColorNormal = UIColor(red: 234, green: 138, blue: 1)
     
 }
